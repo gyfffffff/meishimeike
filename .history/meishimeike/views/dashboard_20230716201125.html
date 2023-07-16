@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="/public/stylesheets/dashboard.css" />
+</head>
+
+<body>
+    <header>
+        <h1>数据可视化-echarts</h1>
+        <div class="showTime"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 0); //
+            function time() {
+                clearTimeout(t); //N
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var m = dt.getMinutes(); //
+                var h = dt.getHours();
+                var s = dt.getSeconds(); //
+                document.querySelector(".showTime").innerHTML =
+                    "当前时间:" + y + "年" + mt + "月" + day + "日-" + h + "时" + m + "分" + s + "秒"
+                t = setTimeout(time, 1000);
+            }
+        </script>
+    </header>
+
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-人员变化 <a href="javascript:;">2020</a><a href="javascript:;">2021</a></h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>14</li>
+                        <li>23</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>需求</li>
+                        <li>供应</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart">ditu</div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar2">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+                <h2>折线图-播放量</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie2">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/public/flexible.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+    <script src="/public/javascript/jquery.js"></script>
+    <script src="/public/javascript/dashboard.js"></script>
+</body>
+
+</html>

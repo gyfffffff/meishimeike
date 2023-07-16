@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>美食每刻</title>
+</head>
+
+<body>
+  <header>
+    <div class="left">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/dashboard">大屏</a>
+        </li>
+      </ul>
+    </div>
+    <div class="middle">美食每刻</div>
+    <div class="right">
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search-heart"
+          viewBox="0 0 16 16">
+          <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+          <path
+            d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+        </svg>
+        search
+      </div>
+    </div>
+  </header>
+
+  <section class="mainbox">
+    <div class="main-left">
+      <div class="text1">
+        集合各大平台美食信息，
+        <br>
+        一站式搜索各地美食。
+      </div>
+      <div class="text2">
+        内容持续更新中...
+      </div>
+      <div class="search-bar">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Text input with dropdown button"
+            placeholder="搜索美食|地域|类型|...">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+              class="bi bi-search-heart" viewBox="0 0 16 16">
+              <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+              <path
+                d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+            </svg> 选择平台
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/search?">大众点评</a></li>
+            <li><a class="dropdown-item" href="#">微信公众号</a></li>
+            <li><a class="dropdown-item" href="#">小红书</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">全部平台</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="main-right">
+      <img class="plate" src="/images/plate-food2.png" alt="">
+      <img class="tomato1-1" src="/images/tomato-g977a635c6_1280.png" alt="">
+      <img class="tomato1-2" src="/images/tomato-g9d9291721_1280.png" alt="">
+      <img class="tomato2" src="/images/tomato3.png" alt="">
+      <img class="mint" src="/images/mint-5000528_1280.png" alt="">
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

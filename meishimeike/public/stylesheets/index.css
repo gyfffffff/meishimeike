@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: myfont1;
+  src: url(../fonts/myfont1.ttf);
+}
+@font-face {
+  font-family: myfont2;
+  src: url(../fonts/myfont2.ttf);
+}
+body {
+  background: url(../images/silk_bg.jpg) no-repeat top center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'myfont1';
+}
+header .left {
+  width: 30%;
+  height: 100%;
+  font-size: 2;
+}
+header .left ul {
+  display: flex;
+  flex-direction: row;
+}
+header .left ul li {
+  margin: 1% 1.5rem;
+}
+header .left ul li a {
+  display: block;
+  width: 4rem;
+  height: 100%;
+  font-size: x-large;
+}
+header .left ul :nth-child(2) {
+  font-family: 'myfont2';
+  font-weight: 600;
+}
+header .middle {
+  width: 40%;
+  text-align: center;
+  font-size: 2.4rem;
+}
+header .right {
+  width: 30%;
+  position: relative;
+}
+header .right .search-icon {
+  width: auto;
+  height: 100%;
+  margin-top: 1%;
+  margin-right: 0%;
+  position: absolute;
+  right: 20%;
+  font-size: 1.75rem;
+}
+.mainbox {
+  min-width: 1024px;
+  max-width: 1920px;
+  height: 31.25rem;
+  margin: 0 auto;
+  padding: 0.125rem 0 0.125rem 0;
+}
+.mainbox .main-left {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  font-family: '宋体';
+}
+.mainbox .main-left .text1 {
+  position: absolute;
+  margin: 6rem 4rem 2rem 6rem;
+  font-size: 2.5rem;
+  font-weight: 650;
+  color: black;
+}
+.mainbox .main-left .text2 {
+  position: absolute;
+  margin: 14rem 5.75rem 14rem;
+  font-size: 1.5rem;
+  font-weight: 520;
+  color: rgba(5, 5, 5, 0.8);
+}
+.mainbox .main-left .search-bar {
+  position: absolute;
+  width: 30rem;
+  height: 5rem;
+  margin: 18rem 5.5rem;
+}
+.mainbox .main-right {
+  position: relative;
+  right: -50%;
+  top: -100%;
+  height: 100%;
+  width: 50%;
+}
+.mainbox .main-right .plate {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 60%;
+  vertical-align: middle;
+  z-index: 5;
+}
+.mainbox .main-right .tomato2 {
+  position: absolute;
+  left: 12%;
+  bottom: 22%;
+  width: 8rem;
+}
+.mainbox .main-right .tomato1-1 {
+  position: absolute;
+  left: 3%;
+  bottom: 20%;
+  width: 3rem;
+}
+.mainbox .main-right .tomato1-2 {
+  position: absolute;
+  left: 12%;
+  bottom: 40%;
+  width: 3rem;
+}
+.mainbox .main-right .mint {
+  position: absolute;
+  right: 16%;
+  top: 12%;
+  width: 6rem;
+}

@@ -1,0 +1,138 @@
+// css init
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myfont1;
+    src: url(../fonts/myfont1.ttf);
+}
+
+body {
+    background: url(../images/silk_bg.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'myfont1';
+
+    .left {
+        width: 30%;
+        height: 100%;
+        // background-color: pink;
+        font-size: 1.75;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin: .005rem 1.5rem;
+            }
+        }
+    }
+
+    .middle {
+        width: 40%;
+        // background-color: palegoldenrod;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .right {
+        width: 30%;
+        // background-color: violet;
+        position: relative;
+
+        .search-icon {
+            width: auto;
+            height: 100%;
+            margin-top: 1%;
+            margin-right: 0%;
+            position: absolute;
+            right: 20%;
+            font-size: 1.75rem;
+        }
+    }
+
+
+
+}
+
+.mainbox {
+    min-width: 1024px;
+    max-width: 1920px;
+    height: 31.25rem;
+    margin: 0 auto;
+    // background-color: pink;
+    padding: .125rem 0 .125rem 0;
+
+    .main-left {
+        height: 100%;
+        width: 50%;
+        background-color: orchid;
+        .text1{
+            position: absolute;
+            ma
+            background-color: palegoldenrod;
+        }
+        .text2{
+            background-color: rebeccapurple;
+        }
+    }
+
+    .main-right {
+        position: relative;
+        right: -50%;
+        top: -100%;
+        height: 100%;
+        width: 50%;
+        // background-color: wheat;
+
+        .plate {
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            width: 60%;
+            vertical-align: middle;
+            z-index: 5;
+        }
+
+        .tomato2 {
+            position: absolute;
+            left: 14%;
+            bottom: 25%;
+            width: 8rem;
+            // height: 3rem;
+        }
+
+        .tomato1-1 {
+            position: absolute;
+            left: 3%;
+            bottom: 20%;
+            width: 3rem;
+        }
+
+        .tomato1-2 {
+            position: absolute;
+            left: 12%;
+            bottom: 40%;
+            width: 3rem;
+        }
+
+        .mint {
+            position: absolute;
+            right: 12%;
+            top: 10%;
+            width: 6rem;
+        }
+    }
+
+}
