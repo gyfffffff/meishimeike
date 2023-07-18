@@ -46,6 +46,31 @@ header .showTime {
   margin: 0 0.1875rem 0.1875rem;
   overflow: hidden;
 }
+.mainbox .column:nth-child(2) .search-area {
+  z-index: 999;
+  width: 10rem;
+  height: 1rem;
+  position: absolute;
+}
+.mainbox .column:nth-child(2) .search-area .search-input {
+  position: relative;
+  left: 30%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  height: 0.5rem;
+  color: rgba(50, 50, 50, 0.6);
+}
+.mainbox .column:nth-child(2) .search-area .btn {
+  cursor: pointer;
+  position: relative;
+  left: 30%;
+  height: 0.55rem;
+  width: 1rem;
+  font-size: 12px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border-color: aliceblue;
+}
 .mainbox .panel {
   position: relative;
   height: 3.875rem;

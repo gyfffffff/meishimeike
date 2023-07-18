@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <header>
+        <h1>数据可视化-echarts</h1>
+        <div class="showTime"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 0); //
+            function time() {
+                clearTimeout(t); //N
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var m = dt.getMinutes(); //
+                var h = dt.getHours();
+                var s = dt.getSeconds(); //
+                document.querySelector(".showTime").innerHTML =
+                    "当前时间:" + y + "年" + mt + "月" + day + "日-" + h + "时" + m + "分" + s + "秒"
+                t = setTimeout(time, 1000);
+            }
+        </script>
+    </header>
+
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>热门类型</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>中西餐对比
+                    <!-- <a href="javascript:;">2022.10-2023.2</a><a href="javascript:;">2023.3-2023.7</a> -->
+                </h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>3129</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>数据量</li>
+                        <li>来源数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-area">
+
+                <input type="text" class="search-input" id="keywordInput" placeholder="查询关键词热度" name="keyword" />
+                <button class="btn" onclick="performSearch()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-search-heart" viewBox="0 0 16 16">
+                        <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                        <path
+                            d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                    </svg>
+                    查询
+                </button>
+            </div>
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar2">
+                <h2>热门城市</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+                <h2>日韩料理对比</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie2">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart">图表</div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script> -->
+    <script src="/javascripts/flexible.js"></script>
+    <script src="/javascripts/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/modified_dashboard_searchwdversion.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/mysql@2.18.1/index.min.js"></script> -->
+    <!-- <script src="/javascripts/mysql.js"></script> -->
+    <!-- <script src="/javascripts/getlidata.js"></script> -->
+    <script>
+        function performSearch() {
+            var keywordInput = document.getElementById('keywordInput');
+            var keyword = keywordInput.value.trim();
+
+            // 执行搜索操作，例如发送到后端进行处理
+            // ...
+            var url = "/searchwordcloud?keyword=" + encodeURIComponent(keyword)
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+
+</html>
