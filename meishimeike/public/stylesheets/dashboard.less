@@ -64,7 +64,7 @@ header {
         padding: 0 0.1875rem 0.5rem;
         border: 1px solid rgba(1, 29, 21, 0.95);
         margin-bottom: .1875rem;
-        background:  rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.25);
 
         &::before {
             position: absolute;
@@ -124,7 +124,8 @@ header {
             text-align: center;
             font-size: 0.25rem;
             font-weight: 400;
-            a{
+
+            a {
                 color: rgb(195, 48, 248);
                 text-decoration: none;
                 margin: 0 0.125rem;
@@ -203,7 +204,7 @@ header {
                 text-align: center;
                 flex: 1;
                 color: palevioletred;
-                font-size: 0.225rem;
+                font-size: 0.3rem;
                 height: .5rem;
                 line-height: .5rem;
                 padding-top: .125rem;
@@ -217,47 +218,48 @@ header {
     height: 10.125rem;
 
     .map1 {
-        width: 6.475rem;
-        height: 6.475rem;
+        width: 9.6rem;
+        height: 9.6rem;
         position: absolute;
-        top: 50%;
+        top: 58%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: url(../images/ring2_resize.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity: .3;
+        animation: rotate1 15s linear infinite;
     }
 
     .map2 {
         position: absolute;
-        top: 50%;
+        top: 58%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 7rem;
-        height: 7rem;
+        width: 9.3rem;
+        height: 9.3rem;
         background: url(../images/ring3.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity: .3;
-        animation: rotate1 14s linear infinite;
+        animation: rotate1 13s linear infinite;
     }
 
     .map3 {
         position: absolute;
-        top: 50%;
+        top: 58%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 7rem;
-        height: 7rem;
+        width: 9.3rem;
+        height: 9.3rem;
         background: url(../images/ring3.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        opacity: .4;
+        opacity: .5;
         animation: rotate2 15s linear infinite;
     }
 
-    .chart{
+    .chart {
         position: absolute;
         // background-color: #fff;
         top: 0;
@@ -287,11 +289,12 @@ header {
     }
 }
 
-@media screen and (max-width: 1024px){
-    html{
+@media screen and (max-width: 1024px) {
+    html {
         font-size: 42px !important;
     }
 }
+
 @media screen and (min-width: 1920px) {
     html {
         font-size: 80px !important;

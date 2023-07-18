@@ -15,7 +15,7 @@
     <div class="left">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/dashboard">大屏</a>
@@ -39,37 +39,35 @@
   <section class="mainbox">
     <div class="main-left">
       <div class="text1">
-        集合各大平台美食信息，
+        集合美食信息，
         <br>
-        一站式搜索各地美食。
+        搜索各地美食。
       </div>
       <div class="text2">
         内容持续更新中...
       </div>
-      <div class="search-bar">
+      <!-- <div class="search-bar row"> -->
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Text input with dropdown button"
-            placeholder="搜索美食|地域|类型|...">
+          <form id="searchForm" action="/search00" method="GET"></form>
+          <input type="text" class="form-control" aria-label="Text input with dropdown button" id="keywordInput" name="keyword" placeholder="搜索美食|位置|店名...">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-              class="bi bi-search-heart" viewBox="0 0 16 16">
+            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search-heart"
+              viewBox="0 0 16 16">
               <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
               <path
                 d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
-            </svg> 选择平台
-          </button>
+            </svg> 搜索方式</button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/search01">大众点评</a></li>
-            <li><a class="dropdown-item" href="/search02">微信公众号</a></li>
-            <li><a class="dropdown-item" href="/search03">小红书</a></li>
+              <li><a class="dropdown-item search-link" href="/search01">美食</a></li>
+              <li><a class="dropdown-item search-link" href="/search02">位置</a></li>
+              <li><a class="dropdown-item search-link" href="/search03">店名</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="/search00">全部平台</a></li>
+                <li><a class="dropdown-item search-link" href="/search00">不限范围</a></li>
           </ul>
+          </form>
         </div>
-      </div>
 
     </div>
     <div class="main-right">
@@ -85,7 +83,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+  <script src="/javascripts/jquery.js"></script>
   <script src="index.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 监听所有<a>标签点击事件，利用事件委托
+      $(".dropdown-menu").on("click", ".search-link", function (event) {
+        event.preventDefault(); // 阻止默认跳转行为
+
+        // 获取输入框中的关键词
+        var keyword = $("#keywordInput").val();
+
+        // 获取点击的<a>标签的href属性值
+        var linkHref = $(this).attr("href");
+
+        // 构造完整的URL，将关键词作为参数拼接到链接中
+        var url = linkHref + "?keyword=" + encodeURIComponent(keyword);
+
+        // 发起请求
+        window.location.href = url;
+      });
+    });
+  </script>
+
 </body>
 
 </html>

@@ -1,0 +1,109 @@
+// css init
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myfont1;
+    src: url(../fonts/myfont1.ttf);
+}
+
+@font-face {
+    font-family: myfont2;
+    src: url(../fonts/myfont2.ttf);
+}
+
+body {
+    background: url(../images/silk_bg.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'myfont1';
+
+    .left {
+        width: 30%;
+        height: 100%;
+        // background-color: pink;
+        font-size: 2;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin: 1% 1.5rem;
+
+                a {
+                    display: block;
+                    width: 4rem;
+                    height: 100%;
+                    font-size: x-large;
+                }
+            }
+
+            & :nth-child(2) {
+                font-family: 'myfont2';
+                font-weight: 600;
+            }
+        }
+    }
+
+    .middle {
+        width: 40%;
+        // background-color: palegoldenrod;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .right {
+        width: 30%;
+        // background-color: violet;
+        position: relative;
+
+        .search-icon {
+            width: auto;
+            height: 100%;
+            margin-top: 1%;
+            margin-right: 0%;
+            position: absolute;
+            right: 20%;
+            font-size: 1.75rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.input-group {
+    position: absolute;
+    top: 1rem;
+    width: 65%;
+    height: 2.75rem;
+    ;
+    // background-color: wheat;
+    margin: 8rem 6.5rem;
+    left: 10%;
+
+    .form-control {
+        position: relative;
+        width: 50%;
+        border-radius: 20px !important;
+    }
+    .btn{
+        border-radius: 20px !important;
+    }
+}
+
+.container {
+    margin-top: 10rem !important;
+    .table{
+        font-size: 14px;
+    }
+}

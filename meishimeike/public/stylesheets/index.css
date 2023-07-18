@@ -90,11 +90,18 @@ header .right .search-icon {
   font-weight: 520;
   color: rgba(5, 5, 5, 0.8);
 }
-.mainbox .main-left .search-bar {
+.mainbox .main-left .input-group {
   position: absolute;
-  width: 30rem;
-  height: 5rem;
+  width: 75%;
   margin: 18rem 5.5rem;
+}
+.mainbox .main-left .input-group .form-control {
+  position: relative;
+  width: 60%;
+  border-radius: 20px !important;
+}
+.mainbox .main-left .input-group .btn {
+  border-radius: 20px !important;
 }
 .mainbox .main-right {
   position: relative;
