@@ -55,6 +55,7 @@ header .right {
   position: relative;
 }
 header .right .search-icon {
+  cursor: pointer;
   width: auto;
   height: 100%;
   margin-top: 1%;
@@ -62,6 +63,11 @@ header .right .search-icon {
   position: absolute;
   right: 20%;
   font-size: 1.75rem;
+}
+header .right .bi-github {
+  margin-top: 2%;
+  position: absolute;
+  left: 30%;
 }
 .mainbox {
   min-width: 1024px;

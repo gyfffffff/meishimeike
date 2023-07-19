@@ -217,7 +217,7 @@
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Oct", "Nov", "Dec"],
+            data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             axisTick: {
                 show: false
             },
@@ -251,14 +251,14 @@
                 type: 'line',
                 // stack: 'Total',
                 smooth: true,
-                data: [2,1,2,2,0,1,2,16,80,6]
+                data: [2, 0, 1, 2, 16, 80, 6, 0, 0, 2, 1, 2]
             },
             {
                 name: '西餐',
                 type: 'line',
                 // stack: 'Total',
                 smooth: true,
-                data: [2,2,3,2,1,0,0,6,81,6]
+                data: [2, 1, 0, 0, 6, 81, 6, 0, 0, 2, 2, 3]
             },
         ]
     };
@@ -290,7 +290,7 @@
         },
         legend: {
             top: '0%',
-            data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine'],
+            data: ['日料', '韩料'],
             textStyle: {
                 color: '#4c9bfc'
             }
@@ -306,7 +306,7 @@
             {
                 type: 'category',
                 boundaryGap: false,
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Oct", "Nov", "Dec"],
                 axisLabel: {
                     textStyle: {
                         color: axisLabelColor,
@@ -341,7 +341,7 @@
         ],
         series: [
             {
-                name: 'Email',
+                name: '日料',
                 type: 'line',
                 smooth: true,
                 lineStyle: {
@@ -378,10 +378,10 @@
                 emphasis: {
                     focus: 'series'
                 },
-                data: [120, 132, 101, 134, 90, 230, 210]
+                data: [3, 0, 5, 8, 22, 139, 9, 0, 0, 5, 0, 0]
             },
             {
-                name: 'Union Ads',
+                name: '韩料',
                 type: 'line',
                 smooth: true,
                 lineStyle: {
@@ -418,7 +418,7 @@
                 emphasis: {
                     focus: 'series'
                 },
-                data: [220, 182, 191, 234, 290, 330, 310]
+                data: [0, 0, 2, 2, 1, 52, 9, 0, 0, 1, 0, 0]
             },
         ]
     };
@@ -459,7 +459,8 @@
                     borderWidth: 0
                 },
                 label: {
-                    show: false
+                    show: false,
+                    position: 'center'
                 },
                 labelLine: {
                     show: false
@@ -472,10 +473,9 @@
                     }
                 },
                 data: [
-                    { value: 1048, name: 'Search Engine' },
-                    { value: 735, name: 'Direct' },
-                    { value: 580, name: 'Email' },
-                    { value: 484, name: 'Union Ads' },
+                    { value: 2912, name: '大众点评' },
+                    { value: 280, name: '企鹅吃喝指南' },
+                    { value: 63, name: 'ShanghaiBUYBUY' },
                 ]
             }
         ]
@@ -520,17 +520,21 @@
                     length2: 8
                 },
                 data: [
-                    { value: 40, name: 'rose 1' },
-                    { value: 38, name: 'rose 2' },
-                    { value: 32, name: 'rose 3' },
-                    { value: 30, name: 'rose 4' },
-                    { value: 28, name: 'rose 5' },
-                    { value: 60, name: 'rose 6' }
+                    { value: 286, name: '￥10-29/人' },
+                    { value: 245, name: '￥30-49/人' },
+                    { value: 240, name: '￥50-69/人' },
+                    { value: 243, name: '￥70-89/人' },
+                    { value: 263, name: '￥90-109/人' },
+                    { value: 143, name: '￥110-129/人' }
                 ]
             }
         ]
     };
     myChart.setOption(option)
+    // 适应屏幕
+    window.addEventListener('resize', () => {
+        myChart.resize()
+    })
 })();
 
 (function () {

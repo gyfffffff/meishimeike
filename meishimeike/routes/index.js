@@ -26,7 +26,7 @@ var search_option = {
   0: ['url_shop', 'shop_name', 'score', 'leixing', 'renjun', 'dizhi', 'pics', '_text', '_time', 'fensi', 'author_dizhi', 'laiyuan'],
   1: ['shop_name', '_text', 'leixing'],
   2: ['dizhi', '_text'],
-  3: ['shop_name', '_text']
+  3: ['shop_name']
 }
 var items = 'url_shop, shop_name, score, renjun, dizhi, leixing, pics, _text, _time, fensi,laiyuan'
 
@@ -172,7 +172,7 @@ router.get('/search02', function (req, res, next) {
 router.get('/search03', function (req, res, next) {
   let idx = 3
   // res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' }); //设置res编码为utf-8
-  var keyword = " '%" + this.req.query.keyword + "%' "
+  var keyword = " '%" + req.query.keyword + "%' "
 
   //sql字符串和参数
   var fetchSql = `select ${items} from fetches where `
@@ -255,7 +255,6 @@ router.get('/searchwordcloud', function (req, res, next) {
 
       // 将 sqlres 数据插入到 HTML 文件相应位置
       let modifiedData = data.replace("'<!-- REPLACE_THIS_WITH_SQLRES -->'", sqlres);
-
       // 将修改后的内容写入新的 HTML 文件
       fs.writeFile(String.raw`E:\mydesk\Romio\ECNU period\课程\Web编程\project_code\meishimeike\public\javascripts\modified_dashboard_searchwdversion.js`, modifiedData, 'utf8', function (err) {
         if (err) {
@@ -273,6 +272,7 @@ router.get('/searchwordcloud', function (req, res, next) {
 
   })
 });
+
 
 
 module.exports = router;

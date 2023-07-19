@@ -64,6 +64,11 @@ header .right .search-icon {
   font-size: 1.75rem;
   cursor: pointer;
 }
+header .right .bi-github {
+  margin-top: 2%;
+  position: absolute;
+  left: 30%;
+}
 .input-group {
   position: absolute;
   top: 1rem;
