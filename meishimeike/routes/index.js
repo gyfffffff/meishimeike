@@ -8,7 +8,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  // res.render('index', { title: 'Express' });
   res.sendFile(String.raw`E:\mydesk\Romio\ECNU period\课程\Web编程\project_code\meishimeike\views\index.html`)
 });
 
@@ -32,7 +31,6 @@ var items = 'url_shop, shop_name, score, renjun, dizhi, leixing, pics, _text, _t
 
 router.get('/search00', function (req, res, next) {
   let idx = 0
-  // res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' }); //设置res编码为utf-8
   var keyword = " '%" + req.query.keyword + "%' "
 
   //sql字符串和参数
@@ -92,7 +90,6 @@ router.get('/search01', function (req, res, next) {
       let start = Math.max(0, index - 10);
       let end = Math.min(result[ri]['_text'].length, index + keyword.length + 10);
       result[ri]['matches'] = '...' + result[ri]['_text'].substring(start, end) + '...';
-      // console.log(result[ri]['matches'])
     }
     // console.log(result)
     let sqlres = JSON.stringify(result);
@@ -263,11 +260,9 @@ router.get('/searchwordcloud', function (req, res, next) {
         }
 
         // 发送新生成的 HTML 文件给客户端
-        res.sendFile(String.raw`E:\mydesk\Romio\ECNU period\课程\Web编程\project_code\meishimeike\dashboard_searchwdversion.html`);
+        res.sendFile(String.raw`E:\mydesk\Romio\ECNU period\课程\Web编程\project_code\meishimeike\views\dashboard_searchwdversion.html`);
       });
     });
-
-
     // console.log(keywordCounts);
 
   })
